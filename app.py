@@ -45,7 +45,7 @@ st.markdown("""
 <style>
     /* Main theme colors */
     :root {
-        --primary-color: #1E3A8A;
+        --primary-color: black ;
         --secondary-color: #991B1B;
         --background-color: #F1F5F9;
         --text-color: #1E293B;
