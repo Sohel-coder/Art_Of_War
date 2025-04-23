@@ -77,7 +77,7 @@ st.markdown("""
     
     /* Card-like containers */
     .stMarkdown, .stDataFrame, .stTable, .css-1r6slb0, div[data-testid="stMetricValue"] {
-        background-color: white;
+        background-color: black;
         border-radius: 8px;
         padding: 15px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
