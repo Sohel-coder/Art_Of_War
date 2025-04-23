@@ -11,6 +11,8 @@ import os
 import plotly.express as px
 import plotly.graph_objects as go
 import country_converter as coco
+import textwrap
+
 
 # Helper function to ensure dataframes are Arrow-compatible
 def make_arrow_compatible(df):
@@ -220,9 +222,9 @@ if page == "Welcome":
             # Display fallback text if image fails to load
             st.error(f"Unable to load image. Please check your internet connection.")
             st.write("Modern Military Forces - The Art of War")
-        
+
         # Add introductory text with enhanced styling
-        st.markdown( """
+        html = textwrap.dedent("""\
         <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
             <h2 style="color: var(--primary-color); margin-top: 0;">Explore Global Military Power Analysis</h2>
             
@@ -259,7 +261,9 @@ if page == "Welcome":
             
             <p style="margin-top: 20px; font-weight: 500;">Use the sidebar navigation to explore different aspects of the analysis.</p>
         </div>
-        """, unsafe_allow_html=True)
+        """)
+        st.markdown(html, unsafe_allow_html=True)
+
     
     with col2:
         # Add key statistics with enhanced styling
@@ -308,7 +312,7 @@ if page == "Welcome":
         
         # Add a "Get Started" button with custom styling
         st.markdown("""
-        <h3 style="color: var(--primary-color); margin-top: 25px; margin-bottom: 15px;">Begin Your Analysis</h3>
+        <h3 style="color: white ; margin-top: 25px; margin-bottom: 15px;">Begin Your Analysis</h3>
         """, unsafe_allow_html=True)
         
         if st.button("Explore Military Strength Comparison", use_container_width=True):
