@@ -264,7 +264,7 @@ if page == "Welcome":
     with col2:
         # Add key statistics with enhanced styling
         st.markdown("""
-        <h3 style="color: var(--primary-color); margin-bottom: 15px;">Key Global Statistics</h3>
+        <h3 style="color: white ; margin-bottom: 15px;">Key Global Statistics</h3>
         """, unsafe_allow_html=True)
         
         # Calculate some interesting stats and filter out Afghanistan
